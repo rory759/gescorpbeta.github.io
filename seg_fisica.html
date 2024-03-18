@@ -1,197 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Seguridad Fisica GESCORP</title>
+      <style>
+         * {
+         box-sizing: border-box;
+         max-width: 100vw;
+         }
+         .active,
+         .dot:hover {
+         background-color: #717171;
+         }
+         .grid-container {
+         margin: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         .grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+         gap: 0;
+         max-width: 90%;
+         margin: 0;
+         }
+         .box {
+         padding: 20px;
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         }
+         .box img {
+         width: 100%;
+         height: auto;
+         }
+         .box h2 {
+        text-align: center;
+         margin-top: 0;
+         }
+         @media (max-width: 640px) {
+         .grid {
+         grid-template-columns: 1fr;
+         width: 80%;
+         }
+         .box {
+         margin-bottom: 10px;
+         }
+         }
+         .grid-container2 {
+         margin: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         .grid2 {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+         gap: 0;
+         max-width: 90%;
+         margin: 0;
+         }
+         .box2 {
+         /*padding: 20px;*/
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         }
+         .box2 img {
+         padding: 0;
+         width: 100%;
+         height: auto;
+         }
+         .box2 h2 {
+         margin-top: 0;
+         text-align: center;
+         }
+         .box2 p {
+         text-align: center;
+         }
+         .text-box2 {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         }
+         @media (max-width: 640px) {
+         .grid2 {
+         grid-template-columns: 1fr;
+         width: 80%;
+         }
+         .title {
+         width: 80% !important;
+         }
+         .box2 {
+         margin-bottom: 10px;
+         }
+         }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Seguridad Fisica GESCORP</title>
+         .table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  <style>
-* {
-  box-sizing: border-box;
-  max-width: 100vw; 
 }
 
-.active, .dot:hover {
-      background-color: #717171;
-    }
-
-.menu {
-  float: left;
-  width: 20%;
-  text-align: center;
-}
-
-.menu a {
-  background-color: #e5e5e5;
-  padding: 8px;
-  margin-top: 7px;
-  display: block;
-  width: 100%;
-  color: black;
-}
-
-.main {
-  float: left;
-  width: 50%;
-  padding: 0 20px;
-}
-
-.right {
-  background-color: #e5e5e5;
-  float: right;
-  width: 50%;
-  padding: 0 20px;  
-  margin-top: 7px;
-  text-align: center;
-}
-
-.top{
-    float: top;
-    width: 100%;
-    padding: 0 20px;
-    text-align: justify;    
-}
-.bot{
-    float: bot;
-    width: 100%;
-    padding: 0 20px;
-    text-align: justify;    
-}
-table, th, td {
-  border: 1px solid gray;
+table {
   border-collapse: collapse;
+  width: 100%;
+ /* max-width: 800px;*/
+  max-width: 90%;
 }
 
-table.center {
-  margin-left: auto; 
-  margin-right: auto;
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
 }
 
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
+.image-cell {
+  vertical-align: middle;
+}
+
+.image-cell img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.text-cell {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  .image-cell {
+    margin-bottom: 10px;
     width: 100%;
   }
+
+  .text-cell {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+  }
+
+  table{
+    max-width: 80%;
+  }
 }
-</style>
-
-</head>
-
-<body>
-  <!-- Header -->
-  <section id="header" style="background-color: black !important;">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="index.html">
-            <h1><span>G</span>es<span>C</span>orp</h1>
-          </a>
+      </style>
+   </head>
+   <body>
+      <!-- Header -->
+      <section id="header" style="background-color: black !important;">
+         <div class="header container">
+            <div class="nav-bar">
+               <div class="brand">
+                  <a href="index.html">
+                     <h1><span>G</span>es<span>C</span>orp</h1>
+                  </a>
+               </div>
+               <div class="nav-list">
+                  <div class="hamburger">
+                     <div class="bar"></div>
+                  </div>
+                  <ul>
+                     <li><a href="index.html" data-after="Inicio">Inicio</a></li>
+                     <li><a href="index.html" data-after="Servicios">Servicios</a></li>
+                     <li><a href="index.html" data-after="Operaciones">Operaciones</a></li>
+                     <li><a href="index.html" data-after="Acerca De">Acerca De</a></li>
+                     <li><a href="index.html" data-after="Contacto">Contacto</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="prueba" style="margin-top: 60px;">
+         <center>
+            <div class="title" style="background-color: #e5e5e5; padding: 15px; text-align: center; width: 90%;">
+               <h1 style="color: black;">SEGURIDAD FISICA GESCORP</h1>
+            </div>
+         </center>
+         <center>
+            <p style="width: 80%;">Nuestros guardias de seguridad certificados están altamente capacitados y respaldados por tecnología de vanguardia para garantizar la seguridad de sus operaciones comerciales.</p>
+         </center><br><br><br>
+         <div class="table-container">
+         <table>
+           <tr>
+             <td class="image-cell">
+               <img src="img/guardia.jpg">
+             </td>
+             <td class="text-cell">
+              <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Tenga la seguridad de que su gente, propiedad y activos están protegidos.</h2>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">Invertimos tiempo en un proceso de selección intensivo, que incluye verificaciones exhaustivas de antecedentes. Una vez contratados, nuestros guardias de seguridad reciben un riguroso entrenamiento en primeros auxilios, prevención de incendios, servicio al cliente y más.</p>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">Ayudan a mantener un entorno seguro y tranquilizan tanto a sus empleados como al público. Cuando se trata de manejar un incidente con la mínima interrupción de sus operaciones, los guardias de seguridad de GESCORP pueden marcar la diferencia.</p>
+             </td>
+           </tr>
+         </table>
+       </div>
+         <br />
+         <br />
+         <br />
+         <br />
+         <div class="grid-container">
+            <div class="grid">
+               <div class="box">
+                  <img src="img/seg1.png" alt="Image 1" style="width: 100px;" />
+                  <h2>Una gama de servicios de guardia de seguridad.</h2>
+                  <p style="text-align: center;">
+                     Para nosotros, ser una ventanilla única de servicios de guardias de seguridad significa poder satisfacer y adaptarnos a las necesidades de nuestros clientes, donde sea que se encuentren.
+                  </p>
+               </div>
+               <div class="box">
+                  <img src="img/seg1.png" alt="Image 1" style="width: 100px;" />
+                  <h2>Soluciones a medida</h2>
+                  <p style="text-align: center;">
+                     Si necesita ayuda para definir los requisitos de seguridad únicos de su organización, no busque más allá de nuestros gerentes de cuenta. Trabajan con usted para determinar sus necesidades y luego implementan un
+                     plan de seguridad personalizado.
+                  </p>
+               </div>
+               <div class="box">
+                  <img src="img/seg1.png" alt="Image 1" style="width: 100px;" />
+                  <h2>Tecnología de Vanguardia</h2>
+                  <p style="text-align: center;">
+                     Nuestros guardias de seguridad están respaldados por las últimas innovaciones tecnológicas, que mejora los tiempos de respuesta en caso de emergencia, lo que le permite tomar mejores decisiones relacionadas con
+                     la seguridad.
+                  </p>
+               </div>
+               <div class="box">
+                  <img src="img/seg1.png" alt="Image 1" style="width: 100px;" />
+                  <h2>Certificaciones de salud, seguridad y formación</h2>
+                  <p style="text-align: center;">
+                     Disfrute de total confianza en nuestros guardias de seguridad sabiendo que cuentan con la capacitación, así como las certificaciones de seguridad y salud que necesitan para proteger lo que es importante para
+                     usted.
+                  </p>
+               </div>
+            </div>
+         </div>
+         <br />
+         <br />
+         <br />
+         <br />
+         <div class="table-container">
+          <table>
+            <tr>
+              <td class="text-cell">
+                <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Protegemos lo más importante</h2><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Como empresa pionera en servicios de seguridad, gestión integrada de riesgos y soluciones de efectivo, somos los socios de confianza con los que puede contar, cuando realmente importa.</p><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestros profesionales altamente capacitados van más allá para brindar una amplia gama de soluciones de seguridad líderes en la industria. Con nuestros valores centrales de integridad, confianza, vigilancia y respeto reflejados en todo lo que hacemos, ofrecemos tranquilidad a todos nuestros clientes al rededor del país.</p><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestra gente nos distingue porque contratamos y capacitamos al personal más calificado para satisfacer las necesidades de nuestros clientes y promovemos el desarrollo continuo. Obtenemos una comprensión única de las realidades locales y las amenazas potenciales, por lo que podemos aplicar conocimientos exclusivos sobre el terreno y ofrecer soluciones personalizadas.</p><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Aseguramos todos los días y hacemos del mundo un lugar más seguro al proteger a las personas, los activos y las operaciones de nuestros clientes.</p>
+              </td>
+              <td class="image-cell">
+                <img src="img/uniformetabla.jpg">
+              </td>
+            </tr>
+          </table>
         </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
-          <ul>
-            <li><a href="index.html" data-after="Inicio">Inicio</a></li>
-            <li><a href="index.html" data-after="Servicios">Servicios</a></li>
-            <li><a href="index.html" data-after="Operaciones">Operaciones</a></li>
-            <li><a href="index.html" data-after="Acerca De">Acerca De</a></li>
-            <li><a href="index.html" data-after="Contacto">Contacto</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>  
-  </section>
-<!-- otsegolectric -->
 
-    <section id="prueba" style="margin-top: 60px">    
-        <center> 
-            <div style="background-color:#e5e5e5;padding:15px;text-align:center;width: 1200px;">
-                <h1 style="color: black;">SEGURIDAD FISICA GESCORP</h1>
+      </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <!-- Footer -->
+      <section id="footer">
+         <div class="footer container">
+            <div class="brand">
+               <h1><span>G</span>ES<span>C</span>ORP</h1>
             </div>
-        </center>
-             <div class="prueba container">        
-                <div style="overflow:auto">              
-                    <p style="width:1200px">Nuestros guardias de seguridad certificados están altamente capacitados y respaldados por tecnología de vanguardia para garantizar la seguridad de sus operaciones comerciales.</p>
-                    <br>
-                <div>
-                <table class="center">
-                    <tr>
-                        <th style="width:600px"><img src="./img/guardia.jpg" alt="" ></th>
-                        <th style="width:600px" style="padding-right: 20px !important;" style="padding-left: 20px !important;">
-                        <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Tenga la seguridad de que su gente, propiedad y activos están protegidos.</h2>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Invertimos tiempo en un proceso de selección intensivo, que incluye verificaciones exhaustivas de antecedentes. Una vez contratados, nuestros guardias de seguridad reciben un riguroso entrenamiento en primeros auxilios, prevención de incendios, servicio al cliente y más.</p>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Ayudan a mantener un entorno seguro y tranquilizan tanto a sus empleados como al público. Cuando se trata de manejar un incidente con la mínima interrupción de sus operaciones, los guardias de seguridad de GESCORP pueden marcar la diferencia.</p>
-                        </th>                        
-                    </tr>                    
-                </table>
+            <h2 style="text-align: center;">Tu Compañía de Seguridad de Confianza</h2>
+            <div class="social-icon">
+               <div class="social-item">
+                  <a><img src="img/footer/i1_1.svg" /></a>
+               </div>
+               <div class="social-item">
+                  <a><img src="img/footer/i2_1.svg" /></a>
+               </div>
+               <div class="social-item">
+                  <a><img src="img/footer/i3_1.svg" /></a>
+               </div>
+               <div class="social-item">
+                  <a><img src="img/footer/i4_1.svg" /></a>
+               </div>
             </div>
-            <br><br><br><br>
-            <div>
-                <table class="center">
-                    <tr>
-                        <th style="width:300px"><img src="img/seg1.png" style="width:70px;"><h2>Una gama de servicios de guardia de seguridad.</h2><br>
-                        <p style="text-align:center">Para nosotros, ser una ventanilla única de servicios de guardias de seguridad significa poder satisfacer y adaptarnos a las necesidades de nuestros clientes, donde sea que se encuentren.</p></th>
-                        <th style="width:300px"><img src="img/seg2.png" style="width:90px"><h2>Soluciones a medida</h2><br>
-                        <p style="text-align:center">Si necesita ayuda para definir los requisitos de seguridad únicos de su organización, no busque más allá de nuestros gerentes de cuenta. Trabajan con usted para determinar sus necesidades y luego implementan un plan de seguridad personalizado.</p></th>
-                        <th style="width:300px"><img src="img/seg3.png" style="width:50px"><h2>Tecnología de vanguardia</h2><br>
-                        <p style="text-align:center">Nuestros guardias de seguridad están respaldados por las últimas innovaciones tecnológicas, que mejora los tiempos de respuesta en caso de emergencia, lo que le permite tomar mejores decisiones relacionadas con la seguridad.</p></th>
-                        <th style="width:300px"><img src="img/seg4.png" style="width:90px"><h2>Certificaciones de salud, seguridad y formación</h2><br>
-                        <p style="text-align:center">Disfrute de total confianza en nuestros guardias de seguridad sabiendo que cuentan con la capacitación, así como las certificaciones de seguridad y salud que necesitan para proteger lo que es importante para usted.</p></th>
-                    </tr>
-                </table>
-            </div>
-            <br><br><br>
-            <div>
-                <table class="center">
-                    <tr>
-                        <th style="width:800px" style="padding-right: 20px !important;" style="padding-left: 20px !important;">
-                        <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Protegemos lo más importante</h2><br><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Como empresa pionera en servicios de seguridad, gestión integrada de riesgos y soluciones de efectivo, somos los socios de confianza con los que puede contar, cuando realmente importa.</p><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestros profesionales altamente capacitados van más allá para brindar una amplia gama de soluciones de seguridad líderes en la industria. Con nuestros valores centrales de integridad, confianza, vigilancia y respeto reflejados en todo lo que hacemos, ofrecemos tranquilidad a todos nuestros clientes al rededor del país.</p><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestra gente nos distingue porque contratamos y capacitamos al personal más calificado para satisfacer las necesidades de nuestros clientes y promovemos el desarrollo continuo. Obtenemos una comprensión única de las realidades locales y las amenazas potenciales, por lo que podemos aplicar conocimientos exclusivos sobre el terreno y ofrecer soluciones personalizadas.</p><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Aseguramos todos los días y hacemos del mundo un lugar más seguro al proteger a las personas, los activos y las operaciones de nuestros clientes.</p>
-                        </th>
-                        <th style="width:400px"><img src="./img/uniformetabla.jpg" alt="" ></th>
-                                                  
-                        </th>                        
-                    </tr>                    
-                </table>
-            </div>
-            <br><br><br>
-                        
-        </div>
-
-      </div>
-    </section>
-
- <!-- Footer -->
- <section id="footer">
-  <div class="footer container">
-    <div class="brand">
-      <h1><span>G</span>ES<span>C</span>ORP</h1>
-    </div>
-    <h2 style="text-align: center;">Tu Compañía de Seguridad de Confianza</h2>
-    <div class="social-icon">
-      <div class="social-item">
-        <a"><img src="img/footer/i1_1.svg" /></a>
-      </div>
-      <div class="social-item">
-        <a><img src="img/footer/i2_1.svg" /></a>
-      </div>
-      <div class="social-item">
-        <a><img src="img/footer/i3_1.svg" /></a>
-      </div>
-      <div class="social-item">
-        <a><img src="img/footer/i4_1.svg" /></a>
-      </div>
-    </div>
-    <p style="text-align: center;">Copyright © 2023 Gescorp. Todos los Derechos Reservados</p>
-  </div>
-</section>
-<!-- End Footer -->
-  <script src="./app.js"></script>
-</body>
+            <p style="text-align: center;">Copyright © 2023 Gescorp. Todos los Derechos Reservados</p>
+         </div>
+      </section>
+      <!-- End Footer -->
+      <script src="./app.js"></script>
+   </body>
 </html>
