@@ -1,204 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Seguridad Fisica GESCORP</title>
+      <style>
+         * {
+         box-sizing: border-box;
+         max-width: 100vw;
+         }
+         .active,
+         .dot:hover {
+         background-color: #717171;
+         }
+         .grid-container {
+         margin: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         .grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+         gap: 0;
+         max-width: 90%;
+         margin: 0;
+         }
+         .box {
+         padding: 5px;
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         }
+         .box img {
+         width: 100%;
+         height: auto;
+         }
+         .box h2 {
+        text-align: center;
+         margin-top: 0;
+         }
+         @media (max-width: 640px) {
+         .grid {
+         grid-template-columns: 1fr;
+         width: 80%;
+         }
+         .box {
+         margin-bottom: 10px;
+         }
+         }
+        /* .grid-container2 {
+         margin: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         .grid2 {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+         gap: 0;
+         max-width: 90%;
+         margin: 0;
+         }
+         .box2 {
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         }
+         .box2 img {
+         padding: 0;
+         width: 100%;
+         height: auto;
+         }
+         .box2 h2 {
+         margin-top: 0;
+         text-align: center;
+         }
+         .box2 p {
+         text-align: center;
+         }
+         .text-box2 {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         }
+         @media (max-width: 640px) {
+         .grid2 {
+         grid-template-columns: 1fr;
+         width: 80%;
+         }
+         .title {
+         width: 80% !important;
+         }
+         .box2 {
+         margin-bottom: 10px;
+         }
+         }*/
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Rastreo y Monitoreo GESCORP</title>
+         .table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  <style>
-* {
-  box-sizing: border-box;
-  max-width: 100vw; 
 }
 
-.active, .dot:hover {
-      background-color: #717171;
-    }
-
-.menu {
-  float: left;
-  width: 20%;
-  text-align: center;
-}
-
-.menu a {
-  background-color: #e5e5e5;
-  padding: 8px;
-  margin-top: 7px;
-  display: block;
-  width: 100%;
-  color: black;
-}
-
-.main {
-  float: left;
-  width: 50%;
-  padding: 0 20px;
-}
-
-.right {
-  background-color: #e5e5e5;
-  float: right;
-  width: 50%;
-  padding: 0 20px;  
-  margin-top: 7px;
-  text-align: center;
-}
-
-.top{
-    float: top;
-    width: 100%;
-    padding: 0 20px;
-    text-align: justify;    
-}
-.bot{
-    float: bot;
-    width: 100%;
-    padding: 0 20px;
-    text-align: justify;    
-}
-table, th, td {
-  border: 1px solid gray;
+table {
   border-collapse: collapse;
+  width: 100%;
+ /* max-width: 800px;*/
+  max-width: 90%;
 }
 
-table.center {
-  margin-left: auto; 
-  margin-right: auto;
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
 }
 
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
+.image-cell {
+  vertical-align: middle;
+}
+
+.image-cell img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.text-cell {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  .image-cell {
+    margin-bottom: 10px;
     width: 100%;
   }
+
+  .text-cell {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+  }
+
+  table{
+    max-width: 80%;
+  }
 }
-</style>  
-</head>
-
-<body>
-  <!-- Header -->
-  <section id="header" style="background-color: black !important;">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="index.html">
-            <h1><span>G</span>es<span>C</span>orp</h1>
-          </a>
-        </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
-          <ul>
-            <li><a href="index.html" data-after="Inicio">Inicio</a></li>
-            <li><a href="index.html" data-after="Servicios">Servicios</a></li>
-            <li><a href="index.html" data-after="Operaciones">Operaciones</a></li>
-            <li><a href="index.html" data-after="Acerca De">Acerca De</a></li>
-            <li><a href="index.html" data-after="Contacto">Contacto</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- otsegolectric -->
-    <section id="prueba" style="margin-top: 60px">
-      <center> 
-            <div style="background-color:#e5e5e5;padding:15px;text-align:center;width: 1200px;">                
-                <h1 style="color: black;">RASTREO Y MONITOREO GESCORP</h1>
-            </div><br>
-        </center>
-             <div class="prueba container">        
-                <div style="overflow:auto">              
-                    <p style="width:1200px">La tecnología de seguimiento y monitoreo permite a los operadores mantener un ojo virtual tanto en objetos como en personas. Ya sea un paquete en un almacén o un recluso en una prisión, la tecnología puede garantizar que permanezcan a la vista y en el camino correcto.</p>
-                    <br>                    
-                    <p style="width:1200px">Entendemos que su negocio es único. Es por eso que ofrecemos una gama de dispositivos y tecnologías de seguimiento de activos que se adaptan a sus requisitos. Desde rastreadores para vehículos hasta etiquetas por Bluetooth® para equipos y llaves, tenemos los dispositivos que necesita y el conocimiento para ayudarlo a encontrar la solución perfecta.</p>
-                    <br>
-                    <p style="width:1200px">GESCORP puede ayudar a su negocio a rastrear activos, reducir costos y mejorar la experiencia del cliente.</p>
-                    <br><br>
-                <div>
-                <table class="center">
-                    <tr>
-                        <th style="width:600px"><img src="./img/rastreo1.jpg" alt="" ></th>                        
-                        <th style="width:600px" style="padding-right: 20px !important;" style="padding-left: 20px !important;" background="./img/texturatabla.png">
-                        <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Obtenga una visión completa 24/7 de sus productos y servicios</h2><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Rastree y monitoree personas, lugares y cosas.</p>
-                        <br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">En un mundo donde los clientes esperan saber la ubicación exacta de un paquete en tránsito, las herramientas precisas de seguimiento y monitoreo son cruciales. Las tecnologías de seguimiento y monitoreo brindan a los operadores una descripción general de su gente, bienes y servicios, ya sea que todavía estén en la fábrica o en tránsito.</p>
-                        <br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Es una de las razones por las que una variedad de tecnologías de seguimiento y monitoreo, como los sistemas GPS, el software de gestión y seguimiento de activos han ganado popularidad.</p>
-                        </th>                        
-                    </tr>                    
-                </table>
+      </style>
+   </head>
+   <body>
+      <!-- Header -->
+      <section id="header" style="background-color: black !important;">
+         <div class="header container">
+            <div class="nav-bar">
+               <div class="brand">
+                  <a href="index.html">
+                     <h1><span>G</span>es<span>C</span>orp</h1>
+                  </a>
+               </div>
+               <div class="nav-list">
+                  <div class="hamburger">
+                     <div class="bar"></div>
+                  </div>
+                  <ul>
+                     <li><a href="index.html" data-after="Inicio">Inicio</a></li>
+                     <li><a href="index.html" data-after="Servicios">Servicios</a></li>
+                     <li><a href="index.html" data-after="Operaciones">Operaciones</a></li>
+                     <li><a href="index.html" data-after="Acerca De">Acerca De</a></li>
+                     <li><a href="index.html" data-after="Contacto">Contacto</a></li>
+                  </ul>
+               </div>
             </div>
-            <br><br><br>            
-            <div>
-                <table class="center" background="./img/texturatabla.png">
-                    <tr>
-                        <th style="width:200px"><h2>Detección/seguimiento humano</h2><br>
-                        <p style="text-align:center">Para monitorear empleados y/o visitantes</p></th>
-                        <th style="width:200px"><h2>Detección de movimiento</h2><br>
-                        <p style="text-align:center">Para identificar la actividad.</p></th>
-                        <th style="width:200px"><h2>Resumen de video</h2><br>
-                        <p style="text-align:center">Para revisar imágenes de vigilancia.</p></th>
-                        <th style="width:200px"><h2>Gestión de videos</h2><br>
-                        <p style="text-align:center">Para acceder a imágenes de más de una cámara.</p></th>
-                        <th style="width:200px"><h2>Sensores térmicos</h2><br>
-                        <p style="text-align:center">Para detectar personas o animales.</p></th>
-                        <th style="width:200px"><h2>Seguimiento de activos</h2><br>
-                        <p style="text-align:center">Para monitorear envíos.</p></th>
-                    </tr>
-                </table>
+         </div>
+      </section>
+      <section id="prueba" style="margin-top: 60px;">
+         <center>
+            <div class="title" style="background-color: #e5e5e5; padding: 15px; text-align: center; width: 90%;">
+               <h1 style="color: black;">RASTREO Y MONITOREO GESCORP</h1>
             </div>
-            <br><br><br><br>
-            <div>
-                <table class="center">
-                    <tr>
-                        <th style="width:800px" style="padding-right: 20px !important;" style="padding-left: 20px !important;">
-                        <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Protegemos lo más importante</h2><br><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Como empresa pionera en servicios de seguridad, gestión integrada de riesgos y soluciones de efectivo, somos los socios de confianza con los que puede contar, cuando realmente importa.</p><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestros profesionales altamente capacitados van más allá para brindar una amplia gama de soluciones de seguridad líderes en la industria. Con nuestros valores centrales de integridad, confianza, vigilancia y respeto reflejados en todo lo que hacemos, ofrecemos tranquilidad a todos nuestros clientes al rededor del país.</p><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestra gente nos distingue porque contratamos y capacitamos al personal más calificado para satisfacer las necesidades de nuestros clientes y promovemos el desarrollo continuo. Obtenemos una comprensión única de las realidades locales y las amenazas potenciales, por lo que podemos aplicar conocimientos exclusivos sobre el terreno y ofrecer soluciones personalizadas.</p><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Aseguramos todos los días y hacemos del mundo un lugar más seguro al proteger a las personas, los activos y las operaciones de nuestros clientes.</p>
-                        </th>
-                        <th style="width:400px"><img src="./img/uniformetabla.jpg" alt="" ></th>
-                                                  
-                        </th>                        
-                    </tr>                    
-                </table>
+         </center>
+         <center>
+            <p style="width:80%">La tecnología de seguimiento y monitoreo permite a los operadores mantener un ojo virtual tanto en objetos como en personas. Ya sea un paquete en un almacén o un recluso en una prisión, la tecnología puede garantizar que permanezcan a la vista y en el camino correcto.</p>
+            <br>                    
+            <p style="width:80%">Entendemos que su negocio es único. Es por eso que ofrecemos una gama de dispositivos y tecnologías de seguimiento de activos que se adaptan a sus requisitos. Desde rastreadores para vehículos hasta etiquetas por Bluetooth® para equipos y llaves, tenemos los dispositivos que necesita y el conocimiento para ayudarlo a encontrar la solución perfecta.</p>
+            <br>
+            <p style="width:80%">GESCORP puede ayudar a su negocio a rastrear activos, reducir costos y mejorar la experiencia del cliente.</p>
+            <br><br>
+         </center><br><br><br>
+         <div class="table-container">
+         <table>
+           <tr>
+             <td class="image-cell">
+               <img src="img/rastreo1.jpg">
+             </td>
+             <td class="text-cell">
+              <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Obtenga una visión completa 24/7 de sus productos y servicios.</h2>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">Rastree y monitoree personas, lugares y cosas.</p>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">En un mundo donde los clientes esperan saber la ubicación exacta de un paquete en tránsito, las herramientas precisas de seguimiento y monitoreo son cruciales. Las tecnologías de seguimiento y monitoreo brindan a los operadores una descripción general de su gente, bienes y servicios, ya sea que todavía estén en la fábrica o en tránsito.</p>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">Es una de las razones por las que una variedad de tecnologías de seguimiento y monitoreo, como los sistemas GPS, el software de gestión y seguimiento de activos han ganado popularidad.</p>
+             </td>
+           </tr>
+         </table>
+       </div>
+         <br />
+         <br />
+         <div class="grid-container">
+            <div class="grid">
+               <div class="box">
+                  <h2>Detección/seguimiento humano</h2>
+                  <p style="text-align: center;">
+                  Para monitorear empleados y/o visitantes
+                  </p>
+               </div>
+               <div class="box">
+                  <h2>Detección de movimiento</h2>
+                  <p style="text-align: center;">
+                     Para identificar la actividad.
+                  </p>
+               </div>
+               <div class="box">
+                  <h2> Resumen de video</h2>
+                  <p style="text-align: center;">
+                  Para revisar imágenes de vigilancia. 
+                  </p>
+               </div>
+               <div class="box">
+                  <h2>Gestión de videos</h2>
+                  <p style="text-align: center;">
+                     Para acceder a imágenes de más de una cámara.
+                  </p>
+               </div>
+               <div class="box">
+                  <h2>Sensores térmicos</h2>
+                  <p style="text-align: center;">
+                  Para detectar personas o animales.
+                  </p>
+               </div>
+               <div class="box">
+                  <h2>Seguimiento de activos</h2>
+                  <p style="text-align: center;">
+                  Para monitorear envíos.
+                  </p>
+               </div>
             </div>
-            <br><br><br>
+         </div>
+         <br />
+         <br />
+         <div class="table-container">
+          <table>
+            <tr>
+              <td class="text-cell">
+                <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Protegemos lo más importante</h2><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Como empresa pionera en servicios de seguridad, gestión integrada de riesgos y soluciones de efectivo, somos los socios de confianza con los que puede contar, cuando realmente importa.</p><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestros profesionales altamente capacitados van más allá para brindar una amplia gama de soluciones de seguridad líderes en la industria. Con nuestros valores centrales de integridad, confianza, vigilancia y respeto reflejados en todo lo que hacemos, ofrecemos tranquilidad a todos nuestros clientes al rededor del país.</p><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestra gente nos distingue porque contratamos y capacitamos al personal más calificado para satisfacer las necesidades de nuestros clientes y promovemos el desarrollo continuo. Obtenemos una comprensión única de las realidades locales y las amenazas potenciales, por lo que podemos aplicar conocimientos exclusivos sobre el terreno y ofrecer soluciones personalizadas.</p><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Aseguramos todos los días y hacemos del mundo un lugar más seguro al proteger a las personas, los activos y las operaciones de nuestros clientes.</p>
+              </td>
+              <td class="image-cell">
+                <img src="img/uniformetabla.jpg">
+              </td>
+            </tr>
+          </table>
+        </div>
 
-    </section>
-
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <h1><span>G</span>ES<span>C</span>ORP</h1>
-      </div>
-      <h2 style="text-align: center;">Tu Compañía de Seguridad de Confianza</h2>
-      <div class="social-icon">
-        <div class="social-item">
-          <a><img src="img/footer/i1_1.svg" /></a>
-        </div>
-        <div class="social-item">
-          <a><img src="img/footer/i2_1.svg" /></a>
-        </div>
-        <div class="social-item">
-          <a><img src="img/footer/i3_1.svg" /></a>
-        </div>
-        <div class="social-item">
-          <a><img src="img/footer/i4_1.svg" /></a>
-        </div>
-      </div>
-      <p style="text-align: center;">Copyright © 2023 Gescorp. Todos los Derechos Reservados</p>
-    </div>
-  </section>
-  <!-- End Footer -->
-  <script src="./app.js"></script>
-</body>
+      </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <!-- Footer -->
+      <section id="footer">
+         <div class="footer container">
+            <div class="brand">
+               <h1><span>G</span>ES<span>C</span>ORP</h1>
+            </div>
+            <h2 style="text-align: center;">Tu Compañía de Seguridad de Confianza</h2>
+            <div class="social-icon">
+               <div class="social-item">
+                  <a><img src="img/footer/i1_1.svg" /></a>
+               </div>
+               <div class="social-item">
+                  <a><img src="img/footer/i2_1.svg" /></a>
+               </div>
+               <div class="social-item">
+                  <a><img src="img/footer/i3_1.svg" /></a>
+               </div>
+               <div class="social-item">
+                  <a><img src="img/footer/i4_1.svg" /></a>
+               </div>
+            </div>
+            <p style="text-align: center;">Copyright © 2023 Gescorp. Todos los Derechos Reservados</p>
+         </div>
+      </section>
+      <!-- End Footer -->
+      <script src="./app.js"></script>
+   </body>
 </html>
