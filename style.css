@@ -8,9 +8,10 @@
 body {
 	/*background-image: url('img/615686.jpg');*/
 	align-items: center !important;
-	height: 100vh !important;
+	/*height: 100vh !important;*/
 	justify-content: center !important;
 	background-color: black !important;
+	
 	}
 	
 html {
@@ -156,7 +157,6 @@ p {
 
 /*cta2 services*/
 .cta2 {
-	width: 100%;
 	display: inline-block;
 	padding: 10px 30px;
 	color: white;
@@ -309,16 +309,117 @@ p {
 }
 /* End Header section */
 
-
-/* Hero Section */
-#hero {
-	background-image: url(./img/slider/knight5.png);
+#hero2 {
+	background-image: url(./img/slider/PruebaSlider.jpg);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
 	z-index: 1;
-	min-height: 100vh;
+	background-position-x: 60%;
+	background-position-y: 50%;
+	height: 100vh;
 }
+#hero2::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0.7;
+	z-index: -1;
+}#hero3 {
+	background-image: url(./img/slider/chicago.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+	background-position-x: 35%;
+	background-position-y: 50%;
+	height: 100vh;
+}
+#hero3::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0.7;
+	z-index: -1;
+}
+/* Hero 4*/
+#hero4 {
+	background-image: url(./img/shield-backup.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+	background-position-x: 45%;
+	background-position-y: 50%;
+	height: 100vh;
+}
+#hero4::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.7;
+	z-index: -1;
+}
+#hero4 .hero4 {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+/*#hero4 .hero4 {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+#hero4 h1 {
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+	position: relative;
+	color: transparent;
+	animation: text_reveal 0.5s ease forwards;
+	animation-delay: 1s;
+}*/
+/* End Hero 4*/
+/* Hero Section */
+@media only screen and (max-width: 643px){
+	#hero{
+		height: 100% !important;
+	}
+	#hero2{
+		height: 100% !important;
+	}
+	#hero3{
+		height: 100% !important;
+	}
+	#hero4{
+		height: 100% !important;
+	}
+}
+
+#hero {
+	background-image: url(./img/slider/knight5.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+	background-position-x: 40%;
+	background-position-y: 50%;
+	height: 100vh;
+}
+
 #hero::after {
 	content: '';
 	position: absolute;
@@ -377,51 +478,7 @@ p {
 }
 /* End Hero Section */
 
-/* Hero 2*/
-#hero2 {
-	background-image: url(./img/shield-backup.jpg);
-	background-size: cover;
-	background-position: top center;
-	position: relative;
-	min-height: 102vh;
-}
 
-
-
-/*#hero2::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-}*/
-
-#hero2 .hero2 {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 50px;
-	justify-content: flex-start;
-}
-#hero2 h1 {
-	display: block;
-	width: fit-content;
-	font-size: 4rem;
-	position: relative;
-	color: white;
-
-}
-
-#hero2 h1 span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0;
-	background-color: #D5A91C;
-}
-
-/* End Hero 2*/
 
 
 /* Services Section */
@@ -498,8 +555,8 @@ p {
 /* End Services Section */
 
 
-/*contact1*/
-/* Create three equal columns that floats next to each other */
+/*contact1
+
 .column1 {
 	color: white;
 	float: left;
@@ -510,16 +567,16 @@ p {
 	box-sizing: border-box;
   }
   
-  /* Clear floats after the columns */
+
   .row1:after {
 	content: "";
 	display: table;
 	clear: both;
   }
-/*end contact1*/
 
-/*About Us*/
-  /* Create three equal columns that floats next to each other */
+
+/*About Us
+   Create three equal columns that floats next to each other 
   .column {
 	color: white;
 	float: left;
@@ -530,7 +587,7 @@ p {
 	box-sizing: border-box;
   }
   
-  /* Clear floats after the columns */
+  /* Clear floats after the columns 
   .row:after {
 	content: "";
 	display: table;
@@ -545,7 +602,7 @@ p {
 		width: 100%;
 	  }
 }
-/*End About Us*/
+End About Us*/
 
 
 /* Projects section */
@@ -586,7 +643,7 @@ p {
 	color: white;
 }
 #projects .project-info h1 {
-	font-size: 4rem;
+	font-size: 3.5rem;
 	font-weight: 500;
 }
 #projects .project-info h2 {
@@ -1009,7 +1066,7 @@ font-family: 'Montserrat', sans-serif;
 }
 
 @media only screen and (max-width: 769px){
-    .gallery .box{
+  .gallery .box{
    flex-direction: column;
   }
 
@@ -1019,6 +1076,25 @@ font-family: 'Montserrat', sans-serif;
 }
 
 @media only screen and (max-width: 643px){
+
+/*.cta2{
+	margin-left: -15%;
+}*/
+.hero4text{
+	margin-top: 0% !important;
+	margin-left: -10% !important;
+	background-color: #00000060;
+	padding: 20px;
+} 
+
+.gal{
+ 	font-size: 2rem !important;
+} 
+
+.cta2{
+	font-size: 1.5rem !important;
+} 
+
 .gallery .heading{
   width: 100%;
 }
