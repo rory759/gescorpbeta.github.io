@@ -149,21 +149,32 @@
           </section>
           <!-- End Hero Section  -->
         </div>
-        
+
         <div class="mySlides fade">
-          <img src="img/slider/PruebaSlider.jpg" style="width:100%; min-height: 100vh;">
+          <!-- Hero Section  -->
+          <section id="hero2">
+          <div class="hero2 container">
+          </div>
+          </section>
+          <!-- End Hero Section  -->
+        </div>
+
+        <div class="mySlides fade">
+          <!-- Hero Section  -->
+          <section id="hero3">
+          <div class="hero3 container">
+          </div>
+          </section>
+          <!-- End Hero Section  -->
         </div>
         
-        <div class="mySlides fade">
-          <img src="img/slider/chicago.jpg" style="width:100%; min-height: 100vh;">
-        </div>
         <!--<a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a> -->
       </div>
     </div>
     <br>
     
-    <div style="text-align:center">
+   <div style="text-align:center; visibility: hidden;">
       <span class="dot" onclick="currentSlide(1)"></span> 
       <span class="dot" onclick="currentSlide(2)"></span> 
       <span class="dot" onclick="currentSlide(3)"></span> 
@@ -216,37 +227,106 @@
     
   <!-- End slider 2-->
 
+
+  <style>
+  .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  }
+
+.box {
+ /* width: 31%;
+  background-color: #f2f2f2;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;*/
+
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+}
+
+.box h2 {
+  margin: 1rem 0;
+}
+
+.box p {
+  /*margin-bottom: 1rem; */
+  padding: 10px;
+  flex: 1;
+}
+
+.box button {
+  font-weight: lighter;
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid #D5A91C;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+}
+
+button:hover{
+  color: white;
+	background-color: #D5A91C;
+}
+
+
+@media (max-width: 1200px) {
+  .box {
+    width: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .box {
+    width: 90%;
+  }
+}
+
+  </style>
+
+
  <!-- Service Section -->
- <section id="services">
-  <div class="services container">
-    <div class="service-top">
+ <section id="services"><br><br><br><br><br><br>
+ <div class="service-top">
       <h1 class="section-title">Serv<span>i</span>cios</h1>
-      <p>Como empresa líder en servicios de seguridad, GESCORP cuenta con un equipo de profesionales altamente capacitados y experimentados para proteger los negocios, los empleados y los activos de nuestros clientes. Donde sea que se encuentren, estamos ahí.</p>
+      <center>
+      <p style="max-width: 85%">Como empresa líder en servicios de seguridad, GESCORP cuenta con un equipo de profesionales altamente capacitados y experimentados para proteger los negocios, los empleados y los activos de nuestros clientes. Donde sea que se encuentren, estamos ahí.</p>
+      </center><br><br>
+ </div>
+
+    <div class="flex-container">
+        <div id="box1" class="box">
+        <img src="img/services/s1.png" alt="Image 1"><br>
+        <button class="facebook" onclick="window.open('seg_fisica.html')">Seguridad Fisica</button>
+      </div>
+      <div id="box2" class="box">
+        <img src="img/services/s2.png" alt="Image 1"><br>
+        <button class="facebook" onclick="window.open('seg_electronica.html')">Seguridad Electronica</button>
+      </div>
+      <div id="box3" class="box">
+        <img src="img/services/s3.png" alt="Image 1"><br>
+        <button class="facebook" onclick="window.open('seg_rastreo.html')">Rastreo Y Monitoreo</button>
+      </div>
+      <div id="box4" class="box">
+        <img src="img/services/s4.png" alt="Image 1"><br>
+        <button class="facebook" onclick="window.open('seg_custodio.html')">CUSTODIO Y ESCOLTAS</button>
+        </div>
     </div>
-    <div class="service-bottom">
-      <div class="service-item">
-        <div class="icon"><img src="img/services/s1.png" href="seg_fisica.html"></div>
-        <a href="seg_fisica.html" type="button" class="cta2">Seguridad Fisica</a>
-        <!--<div class="icon2"><img src="img/gold.jpg"></div> -->
-      </div>
-      <div class="service-item">
-        <div class="icon"><img src="img/services/s2.png" href="seg_electronica.html"></div>
-        <a href="seg_electronica.html" type="button" class="cta2">Seguridad Electronica</a>
-        <!--<div class="icon2"><img src="img/gold.jpg"></div> -->
-      </div>
-      <div class="service-item">
-        <div class="icon"><img src="img/services/s3.png" href="seg_rastreo.html">></div>
-        <a href="seg_rastreo.html" type="button" class="cta2">Rastreo y Monitoreo</a>
-        <!--<div class="icon2"><img src="img/gold.jpg"></div> -->
-      </div>
-      <div class="service-item">
-        <div class="icon"><img src="img/services/s4.png" href="seg_custodio.html"></div>
-        <a href="seg_custodio.html" type="button" class="cta2">Custodio y Escoltas</a>
-            <!--<div class="icon2"><img src="img/gold.jpg"></div> -->
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 <!-- End Service Section -->
 
  <!-- Projects Section -->
@@ -314,13 +394,15 @@
       </div>
       <div class="col-right">
         <h1 class="section-title">ACERCA DE<span> NOSOTROS</span></h1>
-        <h2>Tu Compañía de Seguridad de Confianza</h2>
-        <p>GESCORP es una de las mayores empresas privadas integradas de seguridad física, 
+        <center>
+        <h2 style="max-width: 80%;">Tu Compañía de Seguridad de Confianza</h2>
+        <p style="max-width: 90%;">GESCORP es una de las mayores empresas privadas integradas de seguridad física, 
         gestión de efectivo y gestión de riesgos. Nuestros servicios son importantes para nuestros clientes, 
         ya que confían en nosotros para mantener su seguridad y la de su entorno. Ofrecemos tranquilidad a nuestros clientes 
         que operan en un mundo complejo al proporcionar una amplia gama de servicios de seguridad líderes en la industria, 
         brindados por expertos experimentados y bien informados. A través de nuestras soluciones de seguridad integrales, 
         ayudamos a proteger empresas, empleados, comunidades y activos y hacemos del mundo un lugar más seguro.</p>
+        </center>
        <a class="cta" style="margin-bottom: 20px;">INTEGRIDAD CONFIANZA Y VIGILANCIA</a>
       </div>
     </div>
@@ -328,7 +410,7 @@
   <!-- End About Section -->
 
   <!-- Contact Section -->
-  <div id="contact" style="margin-bottom: 180px;">
+  <div id="contact" style="margin-bottom: 180px;"><br><br><br><br><br><br><br><br><br>
     <div class="contact container">
       <div>
         <h1 class="section-title">CONT<span>A</span>CTO</h1><br>
@@ -362,24 +444,23 @@
 
     <!-- Projects2 Section -->
  
-  <div class="container3">
-    <!-- Hero2 Section  -->
-    <section id="hero2">
-      <div class="hero2 container">
-        <div style="margin-top: 24%;">
-       
+
+    <!-- Hero4 Section  -->
+    <section id="hero4">
+      <div class="hero4 container">
+        <div class="hero4text" style="margin-top: 20%; margin-left: 2%">
          <!-- <h1>Bienvenido a<span></span></h1>
           <h1>GESCORP<span></span></h1><br><br>
           <a href="gallery/gallery.html" type="button" class="cta2" style="width: 64%;">GALERIA</a>-->
-          <p style="font-size: 3rem;">Descubre nuestra galería<span></span></p><br>
-          <p style="font-size: 3rem;">de seguridad empresarial<span></span></p><br>
-          <p style="font-size: 3rem;">en imágenes impactantes.<span></span></p><br>
-          <a href="gallery/gallery.html" type="button" class="cta2" style="width: 40%; margin-top: 10px;">GALERIA</a>
+          <p class="gal" style="font-size: 3rem;">Descubre nuestra galería<span></span></p><br>
+          <p class="gal" style="font-size: 3rem;">de seguridad empresarial<span></span></p><br>
+          <p class="gal" style="font-size: 3rem;">en imágenes impactantes.<span></span></p><br>
+          <a href="gallery/gallery.html" type="button" class="cta2" style="font-size: 3rem;">GALERIA</a>
         </div>
       </div>
     </section>
-    <!-- End Hero2 Section  -->
-    </div>
+    <!-- End Hero4 Section  -->
+
   </div>
   
 <style>
@@ -389,22 +470,50 @@
 <!--End Projects Section -->
 
 <!-- Service1 Section -->
-<div class="row" style="text-align: center;">
-  <div class="column" style="background-color: black;">
-    <img src="img/about us/sh1.png" style="width: 80px;"><br><br>
+<style>
+  .container1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .box1 {
+    box-sizing: border-box;
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .box1 img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1200px) {
+    .box1 {
+      width: 100%;
+    }
+  } 
+</style>
+
+
+<div class="container1">
+  <div class="box1">
+    <img src="img/about us/sh1.png" style="width: 80px;">
     <h2 style="color: #D5A91C;">MISION</h2>
     <p>Proporcionar y garantizar, seguridad privada integral a nuestros clientes, con un recurso humano profesional y 
       calificado empleando tecnologia innovadora adaptada a las necesidades y exigencias, permitiendo ofrecer prevencion,
       responsabilidad, seguridad , tranquilidad , satisfaccion y confianza absoluta en nuestros clientes.</p>
   </div>
-  <div class="column" style="background-color: black;">
-    <img src="img/about us/sh2.png" style="width: 80px;"><br><br>
+  <div class="box1">
+    <img src="img/about us/sh2.png" style="width: 80px;">
     <h2 style="color: #D5A91C;">CONFIANZA</h2>
     <p>Aplicadas conjuntamente con estrategias, tacticas, tecnicas y tecnologias brindandonos como resultado calidad 
       y eficacia en nuestro servicio.</p>
   </div>
-  <div class="column" style="background-color: black;">
-    <img src="img/about us/sh3.png" style="width: 80px;"><br><br>
+  <div class="box1">
+    <img src="img/about us/sh3.png" style="width: 80px;">
     <h2 style="color: #D5A91C;">VISION</h2>
     <p>Consolidarse como una empresa lider en seguridad fisica privada a nivel nacional, reconocida por su efectividad y 
       confiabilidad, basada en sus elevados principios y valores de trabajo, constituyendose como la mejor opcion en el ambito 
