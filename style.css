@@ -51,6 +51,7 @@ a {
 	background-position: center;
 	background-size: cover;
 	width: 250px;
+	vertical-align: middle;
 }
 .swiper-slide img{
 	display: block;
