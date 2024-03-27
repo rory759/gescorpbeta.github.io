@@ -1,184 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Seguridad Electrónica GESCORP</title>
+      <style>
+         * {
+         box-sizing: border-box;
+         max-width: 100vw;
+         }
+         .active,
+         .dot:hover {
+         background-color: #717171;
+         }
+         .grid-container {
+         margin: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         .grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+         gap: 0;
+         max-width: 90%;
+         margin: 0;
+         }
+         .box {
+         padding: 20px;
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         }
+         .box img {
+         width: 100%;
+         height: auto;
+         }
+         .box h2 {
+        text-align: center;
+         margin-top: 0;
+         }
+         @media (max-width: 640px) {
+         .grid {
+         grid-template-columns: 1fr;
+         width: 80%;
+         }
+         .box {
+         margin-bottom: 10px;
+         }
+         }
+         /*.grid-container2 {
+         margin: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         .grid2 {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+         gap: 0;
+         max-width: 90%;
+         margin: 0;
+         }
+         .box2 {
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         }
+         .box2 img {
+         padding: 0;
+         width: 100%;
+         height: auto;
+         }
+         .box2 h2 {
+         margin-top: 0;
+         text-align: center;
+         }
+         .box2 p {
+         text-align: center;
+         }
+         .text-box2 {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         }
+         @media (max-width: 640px) {
+         .grid2 {
+         grid-template-columns: 1fr;
+         width: 80%;
+         }
+         .title {
+         width: 80% !important;
+         }
+         .box2 {
+         margin-bottom: 10px;
+         }
+         }*/
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Seguridad Electronica GESCORP</title>
+  .table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-<style>
-* {
-  box-sizing: border-box;
-  max-width: 100vw; 
 }
 
-.active, .dot:hover {
-      background-color: #717171;
-    }
-
-.menu {
-  float: left;
-  width: 20%;
-  text-align: center;
-}
-
-.menu a {
-  background-color: #e5e5e5;
-  padding: 8px;
-  margin-top: 7px;
-  display: block;
-  width: 100%;
-  color: black;
-}
-
-.main {
-  float: left;
-  width: 50%;
-  padding: 0 20px;
-}
-
-.right {
-  background-color: #e5e5e5;
-  float: right;
-  width: 50%;
-  padding: 0 20px;  
-  margin-top: 7px;
-  text-align: center;
-}
-
-.top{
-    float: top;
-    width: 100%;
-    padding: 0 20px;
-    text-align: justify;    
-}
-.bot{
-    float: bot;
-    width: 100%;
-    padding: 0 20px;
-    text-align: justify;    
-}
-table, th, td {
-  border: 1px solid gray;
+table {
   border-collapse: collapse;
+  width: 100%;
+ /* max-width: 800px;*/
+  max-width: 90%;
 }
 
-table.center {
-  margin-left: auto; 
-  margin-right: auto;
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
 }
 
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
+.image-cell {
+  vertical-align: middle;
+}
+
+.image-cell img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.text-cell {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  .image-cell {
+    margin-bottom: 10px;
     width: 100%;
   }
+
+  .text-cell {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+  }
+
+  table{
+    max-width: 80%;
+  }
 }
-</style>
-</head>
-
-<body>
-  <!-- Header -->
-  <section id="header" style="background-color: black !important;">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="index.html">
-            <h1><span>G</span>es<span>C</span>orp</h1>
-          </a>
-        </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
-          <ul>
-            <li><a href="index.html" data-after="Inicio">Inicio</a></li>
-            <li><a href="index.html" data-after="Servicios">Servicios</a></li>
-            <li><a href="index.html" data-after="Operaciones">Operaciones</a></li>
-            <li><a href="index.html" data-after="Acerca De">Acerca De</a></li>
-            <li><a href="index.html" data-after="Contacto">Contacto</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- otsegolectric -->
-    <section id="prueba" style="margin-top: 60px">
-      <center> 
-            <div style="background-color:#e5e5e5;padding:15px;text-align:center;width: 1200px;">
-                <h1 style="color: black;">SEGURIDAD ELECTRONICA GESCORP</h1>
-            </div><br>
-        </center>
-             <div class="prueba container">        
-                <div style="overflow:auto">              
-                    <p style="width:1200px">En GESCORP, siempre nos mantenemos actualizados con las últimas tecnologías y técnicas para mantener seguros a nuestros clientes, y CCTV (circuito cerrado de televisión) no es una excepción. Ofrecemos una amplia gama de soluciones de videovigilancia que se pueden adaptar a sus necesidades, lo que le permite mantener una vigilancia segura en todas sus instalaciones, las 24 horas del día, los 7 días de la semana.</p>
-                    <br><br>
-                <div>
-                <table class="center">
-                    <tr>
-                        <th style="width:600px"><img src="./img/electronica.jpg" alt="" ></th>
-                        <th style="width:600px" style="padding-right: 20px !important;" style="padding-left: 20px !important;">
-                        <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Soluciones CCTV diseñadas para ti</h2><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Ofrecemos una gama de opciones, desde los tradicionales sistemas analógicos de CCTV hasta las últimas soluciones digitales basadas en IP. Podemos proporcionar todo, desde cámaras independientes para una sucursal hasta cobertura completa de CCTV para grandes complejos de edificios y múltiples propiedades. También ofrecemos sistemas CCTV direccionables IP totalmente integrados para entornos de alta seguridad.</p>
-                        <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Cobertura 24/7</h2><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestros sistemas de monitoreo de última generación nos permiten brindar monitoreo y respuesta remotos de alta confiabilidad, de día o de noche. Algunas de las características disponibles incluyen:</p>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">* Cámaras domo, bala o caja</p>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">* Tecnología de vídeo día/noche con iluminación infrarroja</p>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">* Amplia gama de videograbadores digitales</p>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">* Vigilancia del monitor de pantalla táctil</p>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">* Conectividad móvil para detección remota</p>                        
-                        </th>                        
-                    </tr>                    
-                </table>
+      </style>
+   </head>
+   <body>
+      <!-- Header -->
+      <section id="header" style="background-color: black !important;">
+         <div class="header container">
+            <div class="nav-bar">
+               <div class="brand">
+                  <a href="index.html">
+                     <h1><span>G</span>es<span>C</span>orp</h1>
+                  </a>
+               </div>
+               <div class="nav-list">
+                  <div class="hamburger">
+                     <div class="bar"></div>
+                  </div>
+                  <ul>
+                     <li><a href="index.html" data-after="Inicio">Inicio</a></li>
+                     <li><a href="index.html" data-after="Servicios">Servicios</a></li>
+                     <li><a href="index.html" data-after="Operaciones">Operaciones</a></li>
+                     <li><a href="index.html" data-after="Acerca De">Acerca De</a></li>
+                     <li><a href="index.html" data-after="Contacto">Contacto</a></li>
+                  </ul>
+               </div>
             </div>
-            <br><br><br><br>
-            <div>
-                <table class="center">
-                    <tr>
-                        <th style="width:800px" style="padding-right: 20px !important;" style="padding-left: 20px !important;">
-                        <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Protegemos lo más importante</h2><br><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Como empresa pionera en servicios de seguridad, gestión integrada de riesgos y soluciones de efectivo, somos los socios de confianza con los que puede contar, cuando realmente importa.</p><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestros profesionales altamente capacitados van más allá para brindar una amplia gama de soluciones de seguridad líderes en la industria. Con nuestros valores centrales de integridad, confianza, vigilancia y respeto reflejados en todo lo que hacemos, ofrecemos tranquilidad a todos nuestros clientes al rededor del país.</p><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestra gente nos distingue porque contratamos y capacitamos al personal más calificado para satisfacer las necesidades de nuestros clientes y promovemos el desarrollo continuo. Obtenemos una comprensión única de las realidades locales y las amenazas potenciales, por lo que podemos aplicar conocimientos exclusivos sobre el terreno y ofrecer soluciones personalizadas.</p><br>
-                        <p style="text-align:justify;padding-right:20px;padding-left:20px;">Aseguramos todos los días y hacemos del mundo un lugar más seguro al proteger a las personas, los activos y las operaciones de nuestros clientes.</p>
-                        </th>
-                        <th style="width:400px"><img src="./img/uniformetabla.jpg" alt="" ></th>
-                                                  
-                        </th>                        
-                    </tr>                    
-                </table>
+         </div>
+      </section>
+      <section id="prueba" style="margin-top: 60px;">
+         <center>
+            <div class="title" style="background-color: #e5e5e5; padding: 15px; text-align: center; width: 90%;">
+               <h1 style="color: black;">SEGURIDAD ELECTRONICA GESCORP</h1>
             </div>
-            <br><br><br>
+         </center>
+         <center>
+            <p style="width: 80%;">En GESCORP, siempre nos mantenemos actualizados con las últimas tecnologías y técnicas para mantener seguros a nuestros clientes, y CCTV (circuito cerrado de televisión) no es una excepción. Ofrecemos una amplia gama de soluciones de videovigilancia que se pueden adaptar a sus necesidades, lo que le permite mantener una vigilancia segura en todas sus instalaciones, las 24 horas del día, los 7 días de la semana.</p>
+         </center><br><br><br>
+         <div class="table-container">
+         <table>
+           <tr>
+             <td class="image-cell">
+               <img src="img/electronica.jpg">
+             </td>
+             <td class="text-cell">
+              <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Soluciones CCTV diseñadas para ti</h2>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">Ofrecemos una gama de opciones, desde los tradicionales sistemas analógicos de CCTV hasta las últimas soluciones digitales basadas en IP. Podemos proporcionar todo, desde cámaras independientes para una sucursal hasta cobertura completa de CCTV para grandes complejos de edificios y múltiples propiedades. También ofrecemos sistemas CCTV direccionables IP totalmente integrados para entornos de alta seguridad.</p>
+              <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Cobertura 24/7</h2>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestros sistemas de monitoreo de última generación nos permiten brindar monitoreo y respuesta remotos de alta confiabilidad, de día o de noche. Algunas de las características disponibles incluyen:</p>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">* Cámaras domo, bala o caja</p>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">* Tecnología de vídeo día/noche con iluminación infrarroja</p>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">* Amplia gama de videograbadores digitales</p>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">* Vigilancia del monitor de pantalla táctil</p>
+              <p style="text-align:justify;padding-right:20px;padding-left:20px;">* Conectividad móvil para detección remota</p>
+             </td>
+           </tr>
+         </table>
+       </div>
+         <br />
+         <br />
+         <div class="table-container">
+          <table>
+            <tr>
+              <td class="text-cell">
+                <h2 style="text-align:left;padding-right:20px;padding-left:20px;">Protegemos lo más importante</h2><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Como empresa pionera en servicios de seguridad, gestión integrada de riesgos y soluciones de efectivo, somos los socios de confianza con los que puede contar, cuando realmente importa.</p><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestros profesionales altamente capacitados van más allá para brindar una amplia gama de soluciones de seguridad líderes en la industria. Con nuestros valores centrales de integridad, confianza, vigilancia y respeto reflejados en todo lo que hacemos, ofrecemos tranquilidad a todos nuestros clientes al rededor del país.</p><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Nuestra gente nos distingue porque contratamos y capacitamos al personal más calificado para satisfacer las necesidades de nuestros clientes y promovemos el desarrollo continuo. Obtenemos una comprensión única de las realidades locales y las amenazas potenciales, por lo que podemos aplicar conocimientos exclusivos sobre el terreno y ofrecer soluciones personalizadas.</p><br>
+                <p style="text-align:justify;padding-right:20px;padding-left:20px;">Aseguramos todos los días y hacemos del mundo un lugar más seguro al proteger a las personas, los activos y las operaciones de nuestros clientes.</p>
+              </td>
+              <td class="image-cell">
+                <img src="img/uniformetabla.jpg">
+              </td>
+            </tr>
+          </table>
+        </div>
 
-    </section>
-
-  <!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <div class="brand">
-        <h1><span>G</span>ES<span>C</span>ORP</h1>
-      </div>
-      <h2 style="text-align: center;">Tu Compañía de Seguridad de Confianza</h2>
-      <div class="social-icon">
-        <div class="social-item">
-          <a><img src="img/footer/i1_1.svg" /></a>
-        </div>
-        <div class="social-item">
-          <a><img src="img/footer/i2_1.svg" /></a>
-        </div>
-        <div class="social-item">
-          <a><img src="img/footer/i3_1.svg" /></a>
-        </div>
-        <div class="social-item">
-          <a><img src="img/footer/i4_1.svg" /></a>
-        </div>
-      </div>
-      <p style="text-align: center;">Copyright © 2023 Gescorp. Todos los Derechos Reservados</p>
-    </div>
-  </section>
-  <!-- End Footer -->
-  <script src="./app.js"></script>
-</body>
+      </section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <!-- Footer -->
+      <section id="footer">
+         <div class="footer container">
+            <div class="brand">
+               <h1><span>G</span>ES<span>C</span>ORP</h1>
+            </div>
+            <h2 style="text-align: center;">Tu Compañía de Seguridad de Confianza</h2>
+            <div class="social-icon">
+               <div class="social-item">
+                  <a><img src="img/footer/i1_1.svg" /></a>
+               </div>
+               <div class="social-item">
+                  <a><img src="img/footer/i2_1.svg" /></a>
+               </div>
+               <div class="social-item">
+                  <a><img src="img/footer/i3_1.svg" /></a>
+               </div>
+               <div class="social-item">
+                  <a><img src="img/footer/i4_1.svg" /></a>
+               </div>
+            </div>
+            <p style="text-align: center;">Copyright © 2023 Gescorp. Todos los Derechos Reservados</p>
+         </div>
+      </section>
+      <!-- End Footer -->
+      <script src="./app.js"></script>
+   </body>
 </html>
