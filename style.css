@@ -45,13 +45,13 @@ a {
 	justify-content: space_between;
 }
 .movies{
-	padding: 50px 0 150px 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	padding: 50px 0 150px 0;	
 }
 .swiper{
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .swiper-slide{
 	background-position: center;
