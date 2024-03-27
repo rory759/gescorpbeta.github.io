@@ -50,11 +50,11 @@ a {
 .swiper-slide{
 	background-position: center;
 	background-size: cover;
-	width: 250px;	
+	width: 250px;
 }
 .swiper-slide img{
 	display: block;
-	width: 100%;	
+	width: 100%;
 }
 @media(max-width:991px){
 	body{
