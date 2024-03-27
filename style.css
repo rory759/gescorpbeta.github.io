@@ -51,13 +51,11 @@ a {
 	background-position: center;
 	background-size: cover;
 	width: 250px;
-	vertical-align: middle;
+	align-items: center;
 }
 .swiper-slide img{
 	display: block;
-	width: 100%;
-	align: center;
-	vertical-align: middle;
+	width: 100%;	
 }
 @media(max-width:991px){
 	body{
