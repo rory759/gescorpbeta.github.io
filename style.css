@@ -54,9 +54,7 @@ a {
 }
 .swiper-slide img{
 	display: block;
-	width: 100%;
-	vertical-align: middle;
-	align-items: center;
+	width: 100%;	
 }
 @media(max-width:991px){
 	body{
