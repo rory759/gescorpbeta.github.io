@@ -3,6 +3,7 @@ var swiper = new Swiper(".mySwiper", {
   grabCursor:true,
   centeredSlides:true,
   slidesPerView: "auto",
+  align="center",
   coverflowEffect: {
     rotate:15,
     strech:0,
