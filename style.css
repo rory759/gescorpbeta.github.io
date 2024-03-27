@@ -34,6 +34,9 @@ a {
 .containers{
 	max-width: 1200px;
 	margin: 0 auto;
+	display: felx;
+	justify-content: center;
+	align-items: center;
 }
 .search{
 	padding: 50px 0;
@@ -53,10 +56,8 @@ a {
 	width: 250px;
 }
 .swiper-slide img{
-	display: flex;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
+	display: block;
+	width: 100%;	
 }
 @media(max-width:991px){
 	body{
