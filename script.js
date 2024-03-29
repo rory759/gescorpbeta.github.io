@@ -12,3 +12,9 @@ var swiper = new Swiper(".mySwiper", {
   },
   loop:true,
 });
+
+$('img').mousedown(function (e) {
+  if(e.button == 2) { // right click
+    return false; // do nothing!
+  }
+});
