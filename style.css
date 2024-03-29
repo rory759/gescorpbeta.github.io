@@ -33,6 +33,7 @@ a {
 
 .containers{
 	max-width: 1200px;
+	min-height: 60vh;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
