@@ -5,6 +5,10 @@
 	box-sizing: border-box !important;
 }
 
+img {
+    pointer-events: none;
+}
+
 body {
 	/*background-image: url('img/615686.jpg');*/
 	align-items: center !important;
