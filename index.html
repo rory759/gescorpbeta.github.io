@@ -241,7 +241,6 @@
   margin-bottom: 2rem;
   padding: 1rem;
   text-align: center;*/
-
   display: flex;
   flex-direction: column;
   width: 22%;
@@ -267,7 +266,6 @@
 }
 
 .box button {
-  font-weight: lighter;
 	display: inline-block;
 	padding: 10px 30px;
 	color: white;
@@ -281,6 +279,7 @@
 button:hover{
   color: white;
 	background-color: #D5A91C;
+  cursor: pointer;
 }
 
 
@@ -295,7 +294,6 @@ button:hover{
     width: 90%;
   }
 }
-
   </style>
 
 
@@ -403,44 +401,70 @@ button:hover{
         brindados por expertos experimentados y bien informados. A través de nuestras soluciones de seguridad integrales, 
         ayudamos a proteger empresas, empleados, comunidades y activos y hacemos del mundo un lugar más seguro.</p>
         </center>
-       <a class="cta" style="margin-bottom: 20px;">INTEGRIDAD CONFIANZA Y VIGILANCIA</a>
+       <a class="cta3" style="margin-bottom: 20px;">INTEGRIDAD CONFIANZA Y VIGILANCIA</a>
       </div>
     </div>
-  </section>
+  </section><br><br>
   <!-- End About Section -->
 
-  <!-- Contact Section -->
+  <style>
+  .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  }
 
-  <div id="contact" style="margin-bottom: 180px;"><br><br><br><br><br><br><br><br><br>
-    <div class="contact container">
+  .flex-item {
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #212121;
+  }
+
+  .flex-item h1{
+    font-weight: lighter;
+    padding: 10px;
+    color: white;
+    font-size: 2.8rem;
+  }
+
+  .flex-item img {
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+  }
+  </style>
+  <!-- Contact Section -->
+  <section id="contact" style="margin-bottom: 180px;"><br><br><br><br><br><br><br><br><br><br>
       <div>
         <h1 class="section-title">CONT<span>A</span>CTO</h1><br>
       </div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="img/contact/a1.png" style="min-width: 40px;"/></div>
-          <div class="contact-info">
-            <h1>Teléfono</h1>
-            <h2>+591 72446300</h2>
-          </div>
+      <center>
+        <p style="max-width: 80%; font-size: 1.7rem;">Encuentra toda la información necesaria para contactar con nuestro equipo.</p>
+      </center><br><br><br>
+      <div class="flex-container">
+        <div class="flex-item">
+          <img img src="img/contact/a1.png" alt="Placeholder image" />
+          <h1>Teléfono</h1>
+          <p>+591 72446300</p>
         </div>
-        <div class="contact-item">
-          <div class="icon"><img src="img/contact/a2.png" style="min-width: 40px;"></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>gescorp8@gmail.com</h2>
-          </div>
+        <div class="flex-item">
+          <img img src="img/contact/a2.png" alt="Placeholder image" />
+          <h1>Email</h1>
+          <p>gescorp8@gmail.com</p>
         </div>
-        <div class="contact-item">
-          <div class="icon"><img src="img/contact/a3.png" style="min-width: 40px;"/></div>
-          <div class="contact-info">
-            <h1>Dirección</h1>
-            <h2>Calle Venezuela, Zona Plan 40 s/n</h2>
-          </div>
+        <div class="flex-item">
+          <img img src="img/contact/a3.png" alt="Placeholder image" />
+          <h1>Dirección</h1>
+          <p>Calle Venezuela, Zona Plan 40 s/n</p>
         </div>
       </div>
-    </div>
-  </div>
+    </section><br><br><br><br>
   <!-- End Contact Section -->
 
     <!-- Projects2 Section -->
@@ -453,10 +477,10 @@ button:hover{
          <!-- <h1>Bienvenido a<span></span></h1>
           <h1>GESCORP<span></span></h1><br><br>
           <a href="gallery/gallery.html" type="button" class="cta2" style="width: 64%;">GALERIA</a>-->
-          <p class="gal" style="font-size: 3rem;">Descubre nuestra galería<span></span></p><br>
+          <p class="gal" style="font-size: 3rem;">Visita nuestra galería<span></span></p><br>
           <p class="gal" style="font-size: 3rem;">de seguridad empresarial<span></span></p><br>
-          <p class="gal" style="font-size: 3rem;">en imágenes impactantes.<span></span></p><br>
-          <a href="gallery/gallery.html" type="button" class="cta2" style="font-size: 3rem;">GALERIA</a>
+          <p class="gal" style="font-size: 3rem;">a continuación.<span></span></p><br>
+          <a href="gallery/gallery.html" type="button" class="cta2" style="font-size: 3rem;">VER GALERIA</a>
         </div>
       </div>
     </section>
